@@ -7,9 +7,10 @@ It includes database creation, handling missing data, categorizing mileage, and 
 📂 Steps & SQL Workflow
 1️⃣ Database & Table Creation
 
-Create a database used_car_db
+'''sql
+Create a database used_car_db;
 
-Create the table used_cars with relevant fields like listing_id, make, model, year, mileage, price, etc.
+-- Create the table used_cars with relevant fields like listing_id, make, model, year, mileage, price, etc.
 
 CREATE DATABASE used_car_db;
 USE used_car_db;
@@ -32,7 +33,7 @@ CREATE TABLE used_cars (
     country VARCHAR(50),
     seller_type VARCHAR(30)
 );
-
+'''
 2️⃣ Data Cleaning
 Check Missing Data in Each Column
 SELECT
