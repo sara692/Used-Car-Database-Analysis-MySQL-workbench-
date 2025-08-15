@@ -1,5 +1,6 @@
 # Used-Car-Database-Analysis-MySQL-workbench-
-Project Overview
+
+## Project Overview
 
 This project focuses on data cleaning, transformation, and exploratory analysis of a used car dataset using MySQL.
 It includes database creation, handling missing data, categorizing mileage, and generating various insights such as price trends, popular models, and seller analysis.
@@ -8,11 +9,8 @@ It includes database creation, handling missing data, categorizing mileage, and 
 1️⃣ Database & Table Creation
 
 '''sql
-Create a database used_car_db;
-
--- Create the table used_cars with relevant fields like listing_id, make, model, year, mileage, price, etc.
-
 CREATE DATABASE used_car_db;
+
 USE used_car_db;
 
 CREATE TABLE used_cars (
