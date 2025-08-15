@@ -1,16 +1,18 @@
-# Retail Sales Analysis SQL Project
+# Used-Car-Database-Analysis-MySQL-workbench-Project
 
 ## Project Overview
 
-**Project Title**: Retail Sales Analysis  
+**Project Title**: Used Car Analysis  
 **Level**: Beginner  
-**Database**: `p1_retail_db`
+**Database**: `used_car_db`
 
-This project is designed to demonstrate SQL skills and techniques typically used by data analysts to explore, clean, and analyze retail sales data. The project involves setting up a retail sales database, performing exploratory data analysis (EDA), and answering specific business questions through SQL queries. This project is ideal for those who are starting their journey in data analysis and want to build a solid foundation in SQL.
+This project focuses on data cleaning, transformation, and exploratory analysis of a used car dataset using MySQL.
+It includes database creation, handling missing data, categorizing mileage, and generating various insights such as price trends, popular models, and seller analysis.
+This project is ideal for those who are starting their journey in data analysis and want to build a solid foundation in SQL.
 
 ## Objectives
 
-1. **Set up a retail sales database**: Create and populate a retail sales database with the provided sales data.
+1. **Set up a used car database**: Create and populate a used car database with the provided sales data.
 2. **Data Cleaning**: Identify and remove any records with missing or null values.
 3. **Exploratory Data Analysis (EDA)**: Perform basic exploratory data analysis to understand the dataset.
 4. **Business Analysis**: Use SQL to answer specific business questions and derive insights from the sales data.
@@ -19,25 +21,28 @@ This project is designed to demonstrate SQL skills and techniques typically used
 
 ### 1. Database Setup
 
-- **Database Creation**: The project starts by creating a database named `p1_retail_db`.
-- **Table Creation**: A table named `retail_sales` is created to store the sales data. The table structure includes columns for transaction ID, sale date, sale time, customer ID, gender, age, product category, quantity sold, price per unit, cost of goods sold (COGS), and total sale amount.
+- **Database Creation**: The project starts by creating a database named `used_car_db`.
+- **Table Creation**: A table named `used_cars` is created to store the used car data. The table structure includes columns for listing_id,	vin, make,	model, year, trim, body_type, fuel_type, transmission, mileage, price, condition, subregion, region, country , seller_type
+
 
 ```sql
-CREATE DATABASE p1_retail_db;
-
-CREATE TABLE retail_sales
-(
-    transactions_id INT PRIMARY KEY,
-    sale_date DATE,	
-    sale_time TIME,
-    customer_id INT,	
-    gender VARCHAR(10),
-    age INT,
-    category VARCHAR(35),
-    quantity INT,
-    price_per_unit FLOAT,	
-    cogs FLOAT,
-    total_sale FLOAT
+CREATE TABLE used_cars (
+    listing_id INT PRIMARY KEY,
+    vin VARCHAR(17),
+    make VARCHAR(50),
+    model VARCHAR(50),
+    year INT,
+    trim VARCHAR(50),
+    body_type VARCHAR(50),
+    fuel_type VARCHAR(30),
+    transmission VARCHAR(30),
+    mileage INT,
+    price DECIMAL(10,2),
+    `condition` VARCHAR(30),
+    subregion VARCHAR(50),
+    region VARCHAR(50),
+    country VARCHAR(50),
+    seller_type VARCHAR(3
 );
 ```
 
